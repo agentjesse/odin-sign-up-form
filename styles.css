@@ -1,0 +1,14 @@
+/* CSS RESET: use box-sizing model; remove default margin & form typography styles; fix Mac text rendering; */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+input, button, textarea, select { font: inherit; }
+body { -webkit-font-smoothing: antialiased; }
+/* ------------------------------------------------------------------------- */
+
+.gridContain {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+[class*='gridItem']{
+  /* background-color: #e4e4e4; */
+}
