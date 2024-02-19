@@ -11,6 +11,7 @@ body { -webkit-font-smoothing: antialiased; }
   --white-text-color:hsl(0, 0%, 100%);
   --green-text-shadow:hsl(106, 100%, 41%);
   --main-font-family: 'Roboto',Arial, Helvetica, sans-serif;
+  --grey-base-color: #f9fafb;
 }
 
 .gridContain {
@@ -21,6 +22,7 @@ body { -webkit-font-smoothing: antialiased; }
   grid-template-columns: minmax(235px,40%) 60%;
   grid-template-rows: 35% 30% 35%;
 }
+/* left side banner, few elements so nesting. */
 .sideBanner {
   background-image: url('./images/halie-west-unsplash.webp');
   background-size: cover;
@@ -29,10 +31,6 @@ body { -webkit-font-smoothing: antialiased; }
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-between;
-  p,a {
-    font-size: 0.75rem;
-    color: var(--white-text-color);
-  }
   .bannerShadow {
     flex-basis: 100%;
     background-color: hsla(0, 0%, 0%, 0.4);
@@ -53,11 +51,25 @@ body { -webkit-font-smoothing: antialiased; }
       text-shadow: 0 0 4px var(--green-text-shadow), 0 0 4px var(--green-text-shadow);
     }
   }
+  p,a {
+    font-size: 0.75rem;
+    color: var(--white-text-color);
+  }
 }
-.main{
+/* grid items to right of banner, element amount varies, so no nesting */
+.main {
+  grid-row: 1 / 2;
+  background-color: var(--grey-base-color);
   p{
     font-family: var(--main-font-family);
     font-weight: 500;
     font-style: normal;
   }
+}
+.form {
+  grid-row: 2 / 3;
+}
+.login {
+  grid-row: 3 / 4;
+  background-color: var(--grey-base-color);
 }
