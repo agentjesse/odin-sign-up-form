@@ -3,6 +3,8 @@
 * { margin: 0; }
 input, button, textarea, select { font: inherit; }
 body { -webkit-font-smoothing: antialiased; }
+/* imported google font example */
+/* .skranji-regular { font-family: "Skranji";font-weight: 400;font-style: normal; } */
 /* ------------------------------------------------------------------------- */
 
 .gridContain {
