@@ -3,14 +3,61 @@
 * { margin: 0; }
 input, button, textarea, select { font: inherit; }
 body { -webkit-font-smoothing: antialiased; }
-/* imported google font example */
+/* imported google fonts examples */
 /* .skranji-regular { font-family: "Skranji";font-weight: 400;font-style: normal; } */
-/* ------------------------------------------------------------------------- */
+/* .roboto { font-family: "Roboto"; font-weight: 500, 300; font-style: normal; } */
+/* variables---------------------------------------------------------------- */
+:root {
+  --white-text-color:hsl(0, 0%, 100%);
+  --green-text-shadow:hsl(106, 100%, 41%);
+  --main-font-family: 'Roboto',Arial, Helvetica, sans-serif;
+}
 
 .gridContain {
+  font-family: var(--main-font-family);
   display: grid;
-  grid-template-columns: 40% 60%;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: minmax(235px,40%) 60%;
+  grid-template-rows: 35% 30% 35%;
 }
-[class*='gridItem']{
-  /* background-color: #e4e4e4; */
+.sideBanner {
+  background-image: url('./images/halie-west-unsplash.webp');
+  background-size: cover;
+  grid-row: 1 / 4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  p,a {
+    font-size: 0.75rem;
+    color: var(--white-text-color);
+  }
+  .bannerShadow {
+    flex-basis: 100%;
+    background-color: hsla(0, 0%, 0%, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+    padding: 0.5rem 0;
+    img {
+      height: 6rem;
+    }
+    h1 {
+      color: var(--white-text-color);
+      font-size: 4rem;
+      font-family: 'Skranji';
+      font-weight: 400;
+      font-style: normal;
+      text-shadow: 0 0 4px var(--green-text-shadow), 0 0 4px var(--green-text-shadow);
+    }
+  }
+}
+.main{
+  p{
+    font-family: var(--main-font-family);
+    font-weight: 500;
+    font-style: normal;
+  }
 }
