@@ -39,19 +39,19 @@
           FIRST NAME<input type="text" name="firstName" pattern='^[a-zA-Z\-]+$' placeholder="Thor...">
         </label>
         <label>
-          LAST NAME<input type="text" name="firstName" pattern='^[a-zA-Z\-]+$' placeholder="Odinson...">
+          LAST NAME<input type="text" name="lastName" pattern='^[a-zA-Z\-]+$' placeholder="Odinson...">
         </label>
         <label>
-          EMAIL<input type="text" name="firstName" placeholder="">
+          EMAIL<input type="email" name="email">
         </label>
         <label>
-          PHONE NUMBER<input type="text" name="firstName" placeholder="">
+          PHONE NUMBER<input type="tel" name="phone" pattern="^\d+$" placeholder="">
         </label>
         <label>
-          PASSWORD<input type="text" name="firstName" placeholder="">
+          PASSWORD<input type="password" class="error" name="password">
         </label>
         <label>
-          CONFIRM PASSWORD<input type="text" name="firstName" placeholder="">
+          CONFIRM PASSWORD<input type="password" class="error" name="confirmPassword"><span class="badPassword">*passwords do not match</span>
         </label>
       </section>
       <button type="submit">Create Account</button>

@@ -23,7 +23,7 @@ body { -webkit-font-smoothing: antialiased; }
   width: 100vw;
   height: 100vh;
   grid-template-columns: max(235px,40%) max(400px,60%);
-  grid-template-rows: 35% 35% 30%;
+  grid-template-rows: 35% 39% 26%;
 }
 /* left side banner, few elements so nesting. */
 .sideBanner {
@@ -98,15 +98,21 @@ body { -webkit-font-smoothing: antialiased; }
         border-radius: 3px;
         background-color: rgb(253, 252, 253);
       }
+      .badPassword{
+        display: none; /* js toggle: elem.style.display = 'block' */
+        font-size: 0.75rem;
+        color: red;
+      }
+      .error { /* use js to elem.classList.toggle('error') this class for passwords mismatch*/
+        border: 1px solid #ff0000;
+      }
       input:focus {
         border: 1px solid #0009ff;
         box-shadow: 0 0px 3px #656565;
+        background-color: #b7ffbb;
       }
       input:focus-visible {
         outline: none;
-      }
-      input:valid {
-        background-color: #b7ffbb;
       }
       input:invalid {
         background-color: #ffb7b7;
@@ -130,7 +136,7 @@ body { -webkit-font-smoothing: antialiased; }
   grid-row: 3 / 4;
   background-color: var(--grey-base-color);
   font-size: 0.8rem;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
   a {
     color: var(--olive-green-color);
     text-decoration: none;
