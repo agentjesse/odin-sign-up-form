@@ -9,11 +9,12 @@ body { -webkit-font-smoothing: antialiased; }
 /* variables---------------------------------------------------------------- */
 :root {
   --white-text-color:hsl(0, 0%, 100%);
-  --green-text-shadow:hsl(106, 100%, 41%);
+  --green-text-shadow:hsl(107, 100%, 39%);
   --main-font-family: 'Roboto',Arial, Helvetica, sans-serif;
   --grey-base-color: #f9fafb;
   --olive-green-color: #596D48;
   --base-input-border-color: #E5E7EB;
+  --little-shadow: 0 2px 2px #d7d7d7;
 }
 
 .gridContain {
@@ -50,7 +51,7 @@ body { -webkit-font-smoothing: antialiased; }
       font-family: 'Skranji';
       font-weight: 400;
       font-style: normal;
-      text-shadow: 0 0 4px var(--green-text-shadow), 0 0 4px var(--green-text-shadow);
+      /* text-shadow: 0 0 5px var(--green-text-shadow), 0 0 5px var(--green-text-shadow); */
     }
   }
   p,a {
@@ -63,10 +64,11 @@ body { -webkit-font-smoothing: antialiased; }
 .main {
   grid-row: 1 / 2;
   background-color: var(--grey-base-color);
-  padding: 2rem 2.5rem;
+  padding: 2.75rem 2rem;
   display: flex;
   align-items: end;
-  p{
+  p {
+    width: 90%;
     font-family: var(--main-font-family);
     font-weight: 500;
     font-style: normal;
@@ -79,9 +81,9 @@ body { -webkit-font-smoothing: antialiased; }
     display: flex;
     flex-wrap: wrap;
     gap: 1.1rem 3.5rem;
-    padding: 1rem 2.5rem;
+    padding: 1rem 2rem;
     background-color: var(--white-text-color); /*visually separate button*/
-    box-shadow: 0 2px 2px #d7d7d7;
+    box-shadow: var(--little-shadow);
     span {
       flex-basis: 100%;
     }
@@ -96,6 +98,19 @@ body { -webkit-font-smoothing: antialiased; }
         border-radius: 3px;
         background-color: rgb(253, 252, 253);
       }
+      input:focus {
+        border: 1px solid #0009ff;
+        box-shadow: 0 0px 3px #656565;
+      }
+      input:focus-visible {
+        outline: none;
+      }
+      input:valid {
+        background-color: #b7ffbb;
+      }
+      input:invalid {
+        background-color: #ffb7b7;
+      }
     }
   }
   button {
@@ -107,14 +122,15 @@ body { -webkit-font-smoothing: antialiased; }
     border-radius: 7px;
     color: var(--white-text-color);
     background-color: var(--olive-green-color);
-    margin: 1.25rem 2.5rem;
+    box-shadow: var(--little-shadow);
+    margin: 1.25rem 2rem;
   }
 }
 .login {
   grid-row: 3 / 4;
   background-color: var(--grey-base-color);
   font-size: 0.8rem;
-  padding: 1rem 2.5rem;
+  padding: 1rem 2rem;
   a {
     color: var(--olive-green-color);
     text-decoration: none;
