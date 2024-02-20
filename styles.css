@@ -98,10 +98,12 @@ body { -webkit-font-smoothing: antialiased; }
         border-radius: 3px;
         background-color: rgb(253, 252, 253);
       }
-      .badPassword{
-        display: none; /* js toggle: elem.style.display = 'block' */
+      .badPasswordMsg{
         font-size: 0.75rem;
         color: red;
+      }
+      .hideBadPassMsg{
+        display: none; /*works only when the hideBadPassMsg class exists*/
       }
       .error { /* use js to elem.classList.toggle('error') this class for passwords mismatch*/
         border: 1px solid #ff0000;
@@ -110,6 +112,9 @@ body { -webkit-font-smoothing: antialiased; }
         border: 1px solid #0009ff;
         box-shadow: 0 0px 3px #656565;
         background-color: #b7ffbb;
+      }
+      input[name*='assword']:focus { /*non js way to hide green on focus for password*/
+        background-color: rgb(253, 252, 253);
       }
       input:focus-visible {
         outline: none;
